@@ -11,8 +11,8 @@ export const navigationLinks: Array<navigationLink> = [
   { title: 'Properties', link: '/properties', icon: HiCube },
   { title: 'Contact', link: '/contact', icon: HiNewspaper },
   {
-    title: '(800) 555 555',
-    link: 'tel:(800) 555 555',
+    title: '(66) 65 449 9693',
+    link: 'tel:(66) 65 449 9693',
     icon: HiPhoneArrowUpRight,
   },
 ];

@@ -14,7 +14,7 @@ const DefaultLayout: React.FC<{
         <title>{title}</title>
         <meta name="description" content={description} />
         <meta name="theme-color" content="#000000" />
-        <link rel="icon" href="/logo.png" />
+        <link rel="icon" href="/logo.svg" />
       </Head>
       <Navigation />
       {children}
@@ -24,3 +24,4 @@ const DefaultLayout: React.FC<{
 };
 
 export default DefaultLayout;
+

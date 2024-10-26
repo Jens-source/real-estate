@@ -1,30 +1,22 @@
 export const usePropertyFormat = (property) => {
-  const address = property.location.map((item) => item.name).join(', ');
-  const coverPhoto = property.coverPhoto.url;
-  const propertyType = `${property.category[0].name} ${property.category[1].name}`;
-  const price = property.price.toLocaleString('en-US', {
-    style: 'currency',
-    currency: 'USD',
-    maximumFractionDigits: 0,
-  });
-  const title = property.title;
-  const rooms = property.rooms;
-  const baths = property.baths;
-  const purpose = property.purpose;
-  const sqSize = property.area.toFixed(2);
-  const externalID = property.externalID;
+  const address = property?.Address || 'No address available';
+  const coverPhoto = property?.Images?.[0]?.url || 'default-cover-photo-url'; // Fallback cover photo URL if none available
+  const propertyType = property?.['Property Type']?.value || 'Property type unavailable';
+  const price = property?.['Sell Price'] || property?.['Rent Price'] || 'Price unavailable';
+  const title = property?.Project || 'Untitled';
+  const rooms = property?.Bedrooms || 'N/A';
+  const baths = property?.Bathrooms || 'N/A';
+  const purpose = property?.['Transaction Type']?.value || 'N/A';
+  const sqSize = property?.Size || 'Size unavailable';
+  const externalID = property?.id || 'ID unavailable';
 
-  const photos = property.photos?.map((photo) => photo.url);
-  const description = property.description;
-  const coverVideoUrl = property.coverVideo.url;
-  const coverVideo = coverVideoUrl.slice(coverVideoUrl.length - 11);
-  const panorama = property.panoramas?.length ? property.panoramas[0].url : [];
+  const photos = property?.Images?.map((image) => image?.url) || [];
+  const description = property?.Description || 'No description available';
+  const coverVideo = property?.['coverVideo']?.url ? property['coverVideo'].url.slice(-11) : null;
+  const panorama = property?.['panoramas']?.length ? property.panoramas[0]?.url : null;
 
-  const amenities = property.amenities?.flatMap(({ amenities }) =>
-    amenities?.map((item) => item.text)
-  );
-
-  const furshied = property.furnishingStatus;
+  const amenities = property?.['Amenities']?.map((item) => item.text) || [];
+  const furnished = property?.['Furnishing Status'] || 'Not specified';
 
   return {
     address,
@@ -42,6 +34,6 @@ export const usePropertyFormat = (property) => {
     coverVideo,
     panorama,
     amenities,
-    furshied,
+    furnished,
   };
 };

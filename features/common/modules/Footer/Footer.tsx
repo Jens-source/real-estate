@@ -62,11 +62,11 @@ const Footer = () => {
         <Box display='flex' gap="2" alignItems='center'>
           <HiHomeModern />
           <Text fontSize="lg" fontWeight="black">
-            CASAZ
+            Miror Properties
           </Text>
         </Box>
         <Text marginTop="1rem" fontSize="xs" textAlign="center">
-          All rights reserved - Copyright CASAZ
+          All rights reserved - Copyright Miror Properties
         </Text>
       </Box>
     </Box>
