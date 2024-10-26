@@ -32,14 +32,17 @@ const NavigationDesktop = () => {
                 icon={<item.icon />}
               />
             ))}
+            
+            <Link href="/about" passHref>
             <Button
               padding="1.5rem"
               colorScheme="twitter"
               fontSize="0.8rem"
               fontWeight="medium"
             >
-              CREATE LISTING
+              ABOUT US
             </Button>
+          </Link>
           </Flex>
         </Flex>
       </Box>

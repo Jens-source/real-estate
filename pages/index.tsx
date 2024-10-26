@@ -1,11 +1,10 @@
 import { getProperties } from '@/features/common/API/getProperties';
 import FeaturedProperties from '@/features/Home/components/FeaturedProperties';
 import HeroBanner from '@/features/Home/components/HeroBanner';
-import MeetTheTeam from '@/features/Home/components/MeetTheTeam';
-import Partners from '@/features/Home/components/Partners';
-import Testimonials from '@/features/Home/components/Testimonials';
+import WhatWeOffer from '@/features/Home/components/WhatWeOffer';
 import DefaultLayout from '@/features/Layout/DefaultLayout';
 import { GetStaticProps, InferGetStaticPropsType } from 'next';
+import PropertyTypeCarousel from '@/features/Home/components/PropertyTypeCarousel';
 
 export default function Home({
   featuredProperties,
@@ -17,9 +16,8 @@ export default function Home({
     >
       <HeroBanner />
       <FeaturedProperties featuredProperties={featuredProperties} />
-      <MeetTheTeam />
-      <Partners />
-      <Testimonials />
+      <WhatWeOffer />
+      <PropertyTypeCarousel />
     </DefaultLayout>
   );
 }
