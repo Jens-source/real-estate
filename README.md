@@ -2,7 +2,7 @@
   <img src="https://casaz.vercel.app/logo.png" width="120px" alt="Talks app logo"/>
 </p>
 
-## Real Estate - CASAZ
+## Real Estate - Miror Properties
 <p>Find your dream home with our real estate website. Browse through thousands of listings, connect with expert agents, and discover the perfect property for your lifestyle. Start your search today and make your homeownership dreams a reality.<p>
 
 ## Table of contents

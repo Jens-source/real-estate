@@ -12,7 +12,7 @@ export default function Home({
 }: InferGetStaticPropsType<typeof getStaticProps>) {
   return (
     <DefaultLayout
-      title="CASAZ"
+      title="Miror Properties"
       description='Find your dream home with our real estate website. Browse through thousands of listings, connect with expert agents, and discover the perfect property for your lifestyle. Start your search today and make your homeownership dreams a reality.'
     >
       <HeroBanner />
